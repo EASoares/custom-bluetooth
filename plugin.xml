@@ -4,7 +4,7 @@
 	<AUTHOR>Evandro Augusto Soares</AUTHOR>
 	<DESCRIPTION>Plugin for Cordova inspired in Networking Bluetooth by Franco Bugnano</DESCRIPTION>
 	<js-module name="CustomBluetooth" src="www/CustomBluetooth.js">
-		<clobbers target="cordova.plugins.CustomBluetooth" />
+		<clobbers target="custom.bluetooth" />
 	</js-module>
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
