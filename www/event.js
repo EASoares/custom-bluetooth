@@ -11,6 +11,7 @@ var Event = {
 
 	removeListener: function (callback) {
 		var	i = this.listeners.indexOf(callback);
+		;
 		if (i >= 0) {
 			this.listeners.splice(i, 1);
 		}
