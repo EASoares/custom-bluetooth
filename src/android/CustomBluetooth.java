@@ -223,16 +223,6 @@ public class CustomBluetooth extends CordovaPlugin {
                 }
                 callbackContext.success();
                 return true;
-        } else if(action.equals("callA2dp")){
-                //tentativa1
-                String address = args.getString(0);
-                BluetoothDevice mBluetoothSpeaker= mBluetoothAdapter.getRemoteDevice(address);
-                mBluetoothAdapter.getProfileProxy(this, mProfileListener, BluetoothProfile.A2DP);
-               //tentativa2
-                Intent discoverableIntent = new Intent(BluetoothAdapter.ACTION_CONNECTION_STATE_CHANGED);
-                this.prepareActivity(action, args, callbackContext, discoverableIntent, REQUEST_DISCOVERABLE_BT);
-                callbackContext.success();
-                return true;
         } else if (action.equals("startDiscovery")) {
             // Automatically cancel any previous discovery
             if (this.mBluetoothAdapter.isDiscovering()) {

@@ -38,10 +38,6 @@ exports.unpairDevice = function (address, success, error) {
 	exec(success, error, 'CustomBluetooth', 'unpairDevice', [address]);
 };
 
-exports.callA2dp = function (address, success, error) {
-	exec(success, error, 'CustomBluetooth', 'callA2dp', [address]);
-};
-
 exports.startDiscovery = function (success, error) {
 	exec(success, error, 'CustomBluetooth', 'startDiscovery', []);
 };
