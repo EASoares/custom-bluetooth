@@ -405,32 +405,6 @@ public class CustomBluetooth extends CordovaPlugin {
         return deviceInfo;
     }
 
-    private BluetoothProfile.ServiceListener mProfileListener = new BluetoothProfile.ServiceListener() {
-        public void onServiceConnected(int profile, BluetoothProfile proxy) {
-            if (profile == BluetoothProfile.A2DP) {
-                mBluetoothSpeaker = (BluetoothA2dp) proxy;
-                // no devices are connected         
-                List<BluetoothDevice> connectedDevices = mBluetoothSpeaker.getConnectedDevices();
-                //the one paired (and disconnected) speaker is returned here
-                int[] statesToCheck = {BluetoothA2dp.STATE_DISCONNECTED};           
-                List<BluetoothDevice> disconnectedDevices = 
-                mBluetoothSpeaker.getDevicesMatchingConnectionStates(statesToCheck);
-
-
-
-                BluetoothDevice btSpeaker = disconnectedDevices.get(0); 
-
-                //WHAT NOW?
-
-            }
-        }
-        public void onServiceDisconnected(int profile) {
-            if (profile == BluetoothProfile.A2DP) {
-                mBluetoothSpeaker = null;
-            }
-        }
-        };
-
     public void prepareActivity(String action, CordovaArgs args, CallbackContext callbackContext, Intent intent, int requestCode) {
         // If there already is another activity with this request code, call the error callback in order
         // to notify that the activity has been cancelled
