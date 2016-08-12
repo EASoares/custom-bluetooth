@@ -3,13 +3,14 @@
 	<name>CustomBluetooth</name>
 	<AUTHOR>Evandro Augusto Soares</AUTHOR>
 	<DESCRIPTION>Plugin for Cordova inspired in Networking Bluetooth by Franco Bugnano</DESCRIPTION>
+	<js-module name="event" src="www/event.js" />
 	<js-module name="CustomBluetooth" src="www/CustomBluetooth.js">
 		<clobbers target="custom.bluetooth" />
 	</js-module>
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="CustomBluetooth">
-				<param name="android-package" value="cordova-plugin-custom-bluetooth.CustomBluetooth" />
+				<param name="android-package" value="cordova.plugin.custom.bluetooth.CustomBluetooth" />
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml">
