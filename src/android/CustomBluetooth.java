@@ -1,4 +1,4 @@
-package cordova-plugin-custom-bluetooth;
+package cordova.plugin.custom.bluetooth;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaArgs;
