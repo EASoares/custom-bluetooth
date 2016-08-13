@@ -1,4 +1,4 @@
-cordova.define("cordova-plugin-custom-bluetooth.CustomBluetooth", function(require, exports, module) {
+
 
 var
 	exec = require('cordova/exec'),
@@ -118,4 +118,4 @@ channel.onCordovaReady.subscribe(function() {
 });
 
 
-});
+
